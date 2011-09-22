@@ -1,0 +1,13 @@
+RATIONAL
+I am rarely on time, because I leave too late. A game with
+the side-effect of making me leave earlier would be valuable.
+
+OVERVIEW
+The game would be written for GPS-enabled mobile devices. It
+would be designed to be played in very small, high-reward bursts. The
+specifics of the game can vary, and in fact a framework which
+supports multiple games can be written would be ideal.
+
+The game would use your location. When you move more than (a given
+amount expected from movement within a location) and then stop, the
+game unlocks and allows you to play for a few minutes.
