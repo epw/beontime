@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Be On Time</string>
+  <string name="be_on_time_label">Be On Time</string>
+  <string name="memory_flip_name">MemoryFlip</string>
+  <string name="memory_flip">Memory Flip</string>
+  <string name="evt_ch_name">EventChooser</string>
+  <string name="event_chooser">Event Chooser</string>
+  <string name="event_list_menu_button">Event Chooser</string>
+  <string name="location_chooser">Location Chooser</string>
+
+  <integer name="early_minutes">5000000</integer>
+  <integer name="max_starting_seconds">120</integer>
+  <string name="time_remaining_fmt" formatted="false">Time remaining: %d:%02d</string>
+  <integer name="flip_tile_ms">400</integer>
+  <string name="win">You win!</string>
+  <string name="lose_time">You ran out of time.</string>
+
+  <string name="new_calendar">New Calendar</string>
+  <string name="switch_account">Switch Account</string>
+  <string name="update_title">Update Title</string>
+  <string name="delete">Delete</string>
+
+  <string name="chose_location_menu_button">Select Center Location</string>
+</resources>
