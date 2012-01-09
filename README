@@ -1,0 +1,7 @@
+This project contains the development files for the Be On Time Android
+application.
+
+The primary code is in the BeOnTime/ directory, and can be compiled
+for testing with "and debug install." Experimental code for the games
+used by Be On Time are in their own directories, with main() methods
+to allow them to be run from a PC.

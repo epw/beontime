@@ -37,7 +37,7 @@ public class LocationChooser extends MapActivity {
 			new Runnable () {
 				public void run () {
 					mc.animateTo (overlay.getMyLocation());
-					mc.setZoom (8);
+					mc.setZoom (12);
 				}
 			});
 
@@ -46,7 +46,7 @@ public class LocationChooser extends MapActivity {
 		map.setTraffic (false);
 		map.setStreetView (false);
 			
-		mc.setZoom (8);
+		mc.setZoom (14);
 	}
 
 	@Override
@@ -64,9 +64,9 @@ public class LocationChooser extends MapActivity {
 	@Override
 	public boolean onOptionsItemSelected (MenuItem item) {
 		Intent intent = new Intent ();
+		GeoPoint chosen = map.getMapCenter ();
 		switch (item.getItemId()) {
 		case R.id.choose_location:
-			GeoPoint chosen = map.getMapCenter ();
 			intent.putExtra ("org.willisson.eric.BeOnTime.LAT",
 					 chosen.getLatitudeE6());
 			intent.putExtra ("org.willisson.eric.BeOnTime.LON",
@@ -76,6 +76,9 @@ public class LocationChooser extends MapActivity {
 					 ("org.willisson.eric.BeOnTime.Event"));
 			setResult (Activity.RESULT_OK, intent);
 			this.finish ();
+			return true;
+		case R.id.name_location:
+			// Do something interesting.
 			return true;
 		default:
 			return super.onOptionsItemSelected (item);

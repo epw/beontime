@@ -22,4 +22,5 @@
   <string name="delete">Delete</string>
 
   <string name="chose_location_menu_button">Select Center Location</string>
+  <string name="name_location_menu_button">Name Center Location</string>
 </resources>
