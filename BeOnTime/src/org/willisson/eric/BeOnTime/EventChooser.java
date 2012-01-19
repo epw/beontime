@@ -9,7 +9,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.view.View;
 import java.util.List;
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.SortedMap;
@@ -454,7 +453,7 @@ public class EventChooser extends ListActivity
 		}
 
 		List<Map<String, String>> eventList
-			= new ArrayList (eventTree.keySet().toArray());
+			= new ArrayList (eventTree.keySet());
 
 		ListAdapter adapter = new SimpleAdapter (
 			this,
