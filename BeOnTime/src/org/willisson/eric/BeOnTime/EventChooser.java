@@ -9,6 +9,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.view.View;
 import java.util.List;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.SortedMap;
@@ -367,8 +368,8 @@ public class EventChooser extends ListActivity
 			return;
 		}
 
-		List<Map<String,String>> eventList
-			= new ArrayList<Map<String,String>> ();
+		SortedMap<Map<String,String>, Object> eventTree
+			= new TreeMap<Map<String,String>, Object> (new CompareEvents());
 
 		nowTime.setToNow ();
 		now = nowTime.toMillis (false);
@@ -435,7 +436,7 @@ public class EventChooser extends ListActivity
 						      + Integer.toString (lon));
 				}
 									
-				eventList.add (eventMap);
+				eventTree.put (eventMap, null);
 			}
 			String pageToken = events.getNextPageToken ();
 			if (pageToken != null && !pageToken.isEmpty()) {
@@ -452,7 +453,8 @@ public class EventChooser extends ListActivity
 			}
 		}
 
-		Collections.sort (eventList, new CompareEvents ());
+		List<Map<String, String>> eventList
+			= new ArrayList (eventTree.keySet().toArray());
 
 		ListAdapter adapter = new SimpleAdapter (
 			this,
