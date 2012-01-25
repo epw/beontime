@@ -1,6 +1,9 @@
 This project contains the development files for the Be On Time Android
 application.
 
+For documentation on how to use Be On Time, see the USAGE file (which
+will eventually be made available from within the application).
+
 The primary code is in the BeOnTime/ directory, and can be compiled
 for testing with "and debug install." Experimental code for the games
 used by Be On Time are in their own directories, with main() methods
@@ -18,6 +21,11 @@ ACTIVITIES
 
 Be On Time is based around four major activities.
 
+BeOnTime - This is the "main" activity, which determines
+	which activity should be run when Be On Time as an application
+	is started.
+MemoryFlip - The game being used as the incentive. This may be
+	replaced by other 
 Running Be On Time starts the EventChooser activity. This presents a
 list of events from the user's calendar, allowing any of them to be
 selected. 
